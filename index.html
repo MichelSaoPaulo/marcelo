@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Convite de Casamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fff8f0;
+      color: #5a3e36;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem;
+      background-color: #fceae0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .hero-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero-section {
+      position: relative;
+      width: 90%;
+      max-width: 900px;
+      border-left: 10px solid #fceae0;
+      border-right: 10px solid #fceae0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .hero-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.6);
+    }
+
+    .convite-sobreposto {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .convite-sobreposto h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .convite-sobreposto p,
+    .versiculo {
+      font-size: 1.3rem;  /* Aumentado para melhor leitura */
+      margin: 0.5rem 0;
+      max-width: 700px;
+    }
+
+    .versiculo {
+      font-style: italic;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .link-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .link-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .link-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .romantic-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      margin-top: 0.8rem;
+      color: #8a4b3e;
+    }
+
+    #bg-music {
+      display: block;
+      margin: 2rem auto;
+      max-width: 300px;
+      filter: drop-shadow(0 0 6px #d8c1b3);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .convite-sobreposto h2 {
+        font-size: 2rem;
+      }
+
+      .versiculo {
+        font-size: 1.1rem;
+      }
+
+      .romantic-text {
+        font-size: 1.3rem;
+      }
+
+      .hero-section {
+        border-left: 5px solid #fceae0;
+        border-right: 5px solid #fceae0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Juliana Cristina & Marcelo Mariano</h1>
+    <p>É com muita alegria que convidamos você para celebrar conosco o dia mais especial de nossas vidas.</p>
+  </header>
+
+  <div class="hero-wrapper">
+    <div class="hero-section">
+      <img src="foto-casal.jpg" alt="Foto do casal">
+      <div class="convite-sobreposto">
+        <p>Com a bênção de Deus e de nossos pais,</p>
+        <p><strong>Lucia Helena & José Antonio</strong><br>
+           <strong>Izaldite Nascimento & José Mariano</strong></p>
+
+        <p>Convidam para celebrar a união de seus filhos</p>
+
+        <h2>Juliana Cristina<br>&<br>Marcelo Mariano</h2>
+
+        <div class="versiculo">
+          “Assim, já não são dois, mas sim uma só carne.<br>
+          Portanto, o que Deus uniu, ninguém o separe.”<br>
+          <strong>Mateus 19:6</strong>
+        </div>
+
+        <p>
+          O grande dia será celebrado com amor, fé e alegria no dia<br>
+          <strong>23 de agosto de 2025</strong>, às <strong>16 horas</strong><br>
+          na <strong>Chácara Pingo de Ouro</strong><br>
+          São Marcos I – Avaré/SP
+        </p>
+
+        <p>Sua presença tornará esse momento ainda mais especial!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="links">
+    <div class="link-item">
+      <a href="https://maps.google.com/?q=Chácara+Pingo+de+Ouro+São+Marcos+I+Avaré" target="_blank">
+        <img src="local-festa.jpg" alt="Local da Festa" title="Ver local da festa">
+      </a>
+      <div class="romantic-text">Local do Evento</div>
+    </div>
+    <div class="link-item">
+      <a href="formulario.html" target="_blank">
+        <img src="confirmar-presenca.jpg" alt="Confirmação de Presença" title="Confirmar presença">
+      </a>
+      <div class="romantic-text">Confirme sua Presença</div>
+    </div>
+  </div>
+
+  <!-- Música de fundo com controles -->
+  <audio id="bg-music" controls loop>
+    <source src="musica-romantica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    // Iniciar música após clique ou toque do usuário
+    const audio = document.getElementById('bg-music');
+    const iniciarMusica = () => {
+      audio.play().catch(() => {});
+      document.removeEventListener('click', iniciarMusica);
+      document.removeEventListener('touchstart', iniciarMusica);
+    };
+
+    document.addEventListener('click', iniciarMusica);
+    document.addEventListener('touchstart', iniciarMusica);
+  </script>
+
+</body>
+</html>

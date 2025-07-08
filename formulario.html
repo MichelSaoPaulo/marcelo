@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirmação de Presença</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Georgia&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                  url('fundo-casamento.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff8f0;
+      text-align: center;
+    }
+
+    header {
+      padding: 2rem 1rem;
+      background-color: rgba(252, 234, 224, 0.85);
+      color: #5a3e36;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 1rem;
+    }
+
+    .descricao {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 248, 240, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      text-align: left;
+      color: #5a3e36;
+    }
+
+    label {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+      color: #7b4032;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #d8b7a8;
+      border-radius: 5px;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #8a4b3e;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.2rem;
+      font-family: 'Dancing Script', cursive;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #70372c;
+    }
+
+    #bg-music {
+      display: block;
+      margin: 2rem auto;
+      max-width: 300px;
+      filter: drop-shadow(0 0 6px #fff);
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .popup-content {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 380px;
+      max-height: 90vh;
+      overflow-y: auto;
+      text-align: center;
+      color: #5a3e36;
+      box-sizing: border-box;
+    }
+
+    .popup-content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .popup-content h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .popup-content button {
+      background-color: #8a4b3e;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .descricao {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      form {
+        margin: 1.5rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Confirmação de Presença</h1>
+    <p class="descricao">
+      Ficaremos muito felizes com a sua presença no nosso grande dia!<br>
+      Preencha as informações abaixo para confirmar.
+    </p>
+  </header>
+
+  <form onsubmit="enviarFormulario(event)">
+    <label>Você poderá comparecer ao nosso casamento? *</label>
+    <select name="entry.1965244432" required>
+      <option value="">Selecione</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <label>Por favor, informe seu nome completo. *</label>
+    <input type="text" name="entry.1526296218" required>
+
+    <label>Quantas pessoas além de você? *</label>
+    <select name="entry.1531895587" required>
+      <option value="">Selecione</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+
+    <label>Quantas são crianças? *</label>
+    <select name="entry.1120097726" required>
+      <option value="">Selecione</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+
+    <label>Deixe uma mensagem para os noivos *</label>
+    <textarea name="entry.724593239" rows="4" required></textarea>
+
+    <button type="submit">Confirmar Presença</button>
+  </form>
+
+  <!-- POPUP -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <img src="fundo-casamento.jpg" alt="Obrigado por confirmar!">
+      <h2>Obrigada por confirmar sua presença!</h2>
+      <p>Estamos ansiosos para compartilhar esse momento com você.</p>
+      <button onclick="fecharPopup()">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Música de fundo com controles -->
+  <audio id="bg-music" controls loop>
+    <source src="musica-romantica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+    const iniciarMusica = () => {
+      audio.play().catch(() => {});
+      document.removeEventListener("click", iniciarMusica);
+      document.removeEventListener("touchstart", iniciarMusica);
+    };
+    document.addEventListener("click", iniciarMusica);
+    document.addEventListener("touchstart", iniciarMusica);
+
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+
+      fetch("https://docs.google.com/forms/d/e/1FAIpQLSek7c97u7n2BACyEopgkfwNRH8gJaWPa4FeQaF5jabji6pkFA/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+      }).then(() => {
+        document.getElementById("popup").style.display = "flex";
+      }).catch(() => {
+        alert("Ocorreu um erro ao enviar o formulário.");
+      });
+    }
+
+    function fecharPopup() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
