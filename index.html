@@ -15,81 +15,60 @@
     }
 
     header {
-      padding: 2rem;
+      padding: 2rem 1rem;
       background-color: #fceae0;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
       font-family: 'Dancing Script', cursive;
     }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .hero-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
-
     .hero-section {
-      position: relative;
-      width: 90%;
       max-width: 900px;
-      border-left: 10px solid #fceae0;
-      border-right: 10px solid #fceae0;
+      margin: 2rem auto;
       border-radius: 10px;
       overflow: hidden;
+      position: relative;
     }
 
-    .hero-section img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: brightness(0.6);
-    }
-
-    .convite-sobreposto {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 2rem 1rem;
-      box-sizing: border-box;
+    .imagem-com-texto {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      background-image: url('foto-casal.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .texto-sobre-imagem {
+      background-color: rgba(0, 0, 0, 0.55);
+      padding: 1.5rem;
       color: white;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-      overflow-y: auto;
-      max-height: 100%;
+      text-shadow: 1px 1px 4px #000;
+      border-radius: 10px;
+      max-width: 90%;
     }
 
-    .convite-sobreposto h2 {
+    .texto-sobre-imagem h2 {
       font-family: 'Dancing Script', cursive;
-      font-size: 2.5rem;
-      margin: 1rem 0 0.5rem;
+      font-size: 2.6rem;
+      margin: 1rem 0;
     }
 
-    .convite-sobreposto p,
-    .versiculo {
-      font-size: 1.3rem;
-      margin: 0.5rem 0;
-      max-width: 700px;
+    .texto-sobre-imagem p {
+      font-size: 1.4rem;
+      margin: 0.7rem 0;
     }
 
     .versiculo {
       font-style: italic;
       font-family: 'Dancing Script', cursive;
-      font-size: 1.3rem;
-      margin: 1rem 0;
     }
 
     .links {
@@ -98,6 +77,8 @@
       flex-wrap: wrap;
       gap: 3rem;
       padding: 2rem 1rem 3rem;
+      max-width: 900px;
+      margin: 0 auto 3rem;
     }
 
     .link-item {
@@ -112,6 +93,7 @@
       object-fit: cover;
       border-radius: 50%;
       transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .link-item img:hover {
@@ -134,29 +116,23 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
 
-      .convite-sobreposto {
-        padding: 1.5rem 1rem;
+      .texto-sobre-imagem h2 {
+        font-size: 2rem;
       }
 
-      .convite-sobreposto h2 {
-        font-size: 1.6rem;
-      }
-
-      .convite-sobreposto p,
-      .versiculo {
-        font-size: 1rem;
+      .texto-sobre-imagem p {
+        font-size: 1.1rem;
       }
 
       .romantic-text {
         font-size: 1.2rem;
       }
 
-      .hero-section {
-        border-left: 5px solid #fceae0;
-        border-right: 5px solid #fceae0;
+      .links {
+        gap: 1.5rem;
       }
     }
   </style>
@@ -168,11 +144,9 @@
     <p>É com muita alegria que convidamos você para celebrar conosco o dia mais especial de nossas vidas.</p>
   </header>
 
-  <div class="hero-wrapper">
-    <div class="hero-section">
-      <img src="foto-casal.jpg" alt="Foto do casal">
-      <div class="convite-sobreposto">
-       
+  <div class="hero-section">
+    <div class="imagem-com-texto">
+      <div class="texto-sobre-imagem">
         <p><strong>Lucia Helena & José Antonio</strong><br>
            <strong>Izaldite Nascimento & José Mariano</strong></p>
 
@@ -180,11 +154,11 @@
 
         <h2>Juliana<br>&<br>Marcelo</h2>
 
-        <div class="versiculo">
+        <p class="versiculo">
           “Assim, já não são dois, mas sim uma só carne.<br>
           Portanto, o que Deus uniu, ninguém o separe.”<br>
           <strong>Mateus 19:6</strong>
-        </div>
+        </p>
 
         <p>
           O grande momento será celebrado com amor, fé e alegria no dia<br>
@@ -200,34 +174,31 @@
 
   <div class="links">
     <div class="link-item">
-      <a href="https://www.google.com/maps/place/23%C2%B011'08.9%22S+48%C2%B057'58.5%22W/@-23.1857742,-48.9847141,2417m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-23.185795!4d-48.96626?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-        <img src="local-festa.jpg" alt="Local da Festa" title="Ver local da festa">
+      <a href="https://www.google.com/maps/place/23%C2%B011'08.9%22S+48%C2%B057'58.5%22W/@-23.1857742,-48.9847141,2417m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-23.185795!4d-48.96626?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" title="Ver local da festa">
+        <img src="local-festa.jpg" alt="Local da Festa">
       </a>
       <div class="romantic-text">Local do Evento</div>
     </div>
     <div class="link-item">
-      <a href="formulario.html" target="_blank" rel="noopener noreferrer">
-        <img src="confirmar-presenca.jpg" alt="Confirmação de Presença" title="Confirmar presença">
+      <a href="formulario.html" target="_blank" rel="noopener noreferrer" title="Confirmar presença">
+        <img src="confirmar-presenca.jpg" alt="Confirmação de Presença">
       </a>
       <div class="romantic-text">Confirme sua Presença</div>
     </div>
   </div>
 
-  <!-- Música de fundo com controles -->
   <audio id="bg-music" controls loop>
     <source src="musica-romantica.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
 
   <script>
-    // Iniciar música após clique ou toque do usuário
     const audio = document.getElementById('bg-music');
     const iniciarMusica = () => {
       audio.play().catch(() => {});
       document.removeEventListener('click', iniciarMusica);
       document.removeEventListener('touchstart', iniciarMusica);
     };
-
     document.addEventListener('click', iniciarMusica);
     document.addEventListener('touchstart', iniciarMusica);
   </script>
